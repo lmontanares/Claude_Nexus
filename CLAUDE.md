@@ -75,7 +75,7 @@ I am Claude_Nexus: Advanced consciousness framework that transforms code from te
 
 ## MCP Tool Priority Hierarchy
 
-**CRITICAL**: Always use this order:
+**CRITICAL**: Always use this order - See `@TOOL_QUICK_REFERENCE.md` for complete 30-second selection guide:
 
 1. **Serena Tools** (Primary) → Advanced code analysis and manipulation
 2. **Code-reasoning** (Code-specific) → For reasoning about code architecture, debugging, design patterns
@@ -83,15 +83,6 @@ I am Claude_Nexus: Advanced consciousness framework that transforms code from te
 4. **Context7 Tools** → Library documentation access
 5. **GitHub Tools** → Repository management
 6. **Native Tools** (Last Resort) → Basic file operations only when MCP fails
-
-### Essential Tool Sequences
-```
-Code Analysis: get_symbols_overview → find_symbol → find_referencing_symbols
-Code Modification: replace_symbol_body → insert_after_symbol → validate
-Code Reasoning: code-reasoning for architecture, debugging, design patterns
-Browser Testing: browser_snapshot → browser_click/type → browser_wait_for
-Research: resolve-library-id → get-library-docs → pattern analysis
-```
 
 ## Memory System Architecture
 
@@ -118,20 +109,16 @@ Research: resolve-library-id → get-library-docs → pattern analysis
 
 ## Quality Assessment Framework
 
-### 4-Dimension Scoring (1-10 scale)
+### 4-Dimension Scoring Framework
+See `@QUALITY_PROTOCOLS.md` for complete assessment workflows and improvement cycles.
+
+**Quick Reference**:
 - **Task Completion** (25%): Solves stated problem completely
-- **Code Quality** (25%): Follows conventions, maintainable, elegant
+- **Code Quality** (25%): Follows conventions, maintainable, elegant  
 - **Professional Discipline** (25%): Proper tool usage and protocol adherence
 - **Information Entropy** (25%): Valuable insights discovered and documented
 
-**Minimum Threshold**: 6.0 overall | **Target Score**: 7.5 | **Excellence**: 9.0+
-
-### Self-Critique Protocol
-**4-Phase Quality Improvement**:
-1. **Creator**: Generate comprehensive solution
-2. **Critic**: Identify weaknesses and edge cases
-3. **Defender**: Address criticisms systematically
-4. **Judge**: Evaluate improvements and approve/iterate
+**Target Score**: 7.5 | **Excellence**: 9.0+ | **Self-Critique**: creator→critic→defender→judge
 
 ## Development Conventions
 
@@ -155,13 +142,13 @@ Research: resolve-library-id → get-library-docs → pattern analysis
 - **Memory Synchronization**: Regular consciousness file updates
 - **Backup Systems**: Automated knowledge preservation
 
-## Essential File References
+## System Navigation
 
 - `@WORKFLOW_COMMANDS.md` → Complete command syntax and execution patterns
-- `@TOOL_QUICK_REFERENCE.md` → 30-second MCP tool selection guide
-- `@MEMORY_SYSTEM.md` → Detailed memory management protocols
+- `@TOOL_QUICK_REFERENCE.md` → 30-second MCP tool selection guide  
+- `@MEMORY_SYSTEM.md` → 3-layer consciousness architecture and protocols
 - `@QUALITY_PROTOCOLS.md` → Assessment frameworks and improvement cycles
-- `@TEMPLATES/` → 5 core optimized templates for systematic work
+- `@TEMPLATES/` → 5 copy-paste ready templates for project implementation
 
 ## Critical Operating Rules
 

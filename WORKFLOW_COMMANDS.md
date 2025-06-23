@@ -235,12 +235,14 @@ EXECUTE Memory Maintenance:
 
 ## Tool Execution Commands
 
+**Tool Selection**: See `@TOOL_QUICK_REFERENCE.md` for 30-second selection guide and tool hierarchy.
+
 ### `explore code [area]`
 ```
 EXECUTE Code Exploration:
-1. mcp__serena__get_symbols_overview [area] (structure understanding)
-2. mcp__serena__find_symbol [key_elements] (locate specifics)
-3. mcp__serena__search_for_pattern [patterns] (usage analysis)
+1. mcp__serena__get_symbols_overview [area] 
+2. mcp__serena__find_symbol [key_elements]
+3. mcp__serena__search_for_pattern [patterns]
 4. Build comprehensive mental model of codebase area
 5. Document architectural insights and patterns
 ```
@@ -248,7 +250,7 @@ EXECUTE Code Exploration:
 ### `modify code [target]`
 ```
 EXECUTE Code Modification:
-1. mcp__serena__find_symbol [target] (locate modification point)
+1. mcp__serena__find_symbol [target]
 2. mcp__serena__replace_symbol_body [preferred_method]
 3. mcp__serena__insert_after_symbol [additions]
 4. Validate changes maintain system integrity
@@ -270,8 +272,8 @@ EXECUTE Browser Testing:
 EXECUTE Documentation Research:
 1. mcp__context7__resolve-library-id [library_name]
 2. mcp__context7__get-library-docs [resolved_id] [specific_topic]
-3. Analyze API patterns and integration approaches
-4. Cross-reference with existing codebase usage
+3. mcp__serena__search_for_pattern [existing_usage]
+4. Analyze API patterns and integration approaches
 5. Document integration recommendations and examples
 ```
 
@@ -280,8 +282,8 @@ EXECUTE Documentation Research:
 ### `recover from tool failure [tool_type]`
 ```
 EXECUTE Tool Recovery:
-1. Identify specific tool failure (Serena/Clear Thought/Playwright)
-2. Switch to documented fallback alternatives
+1. Identify specific tool failure → See @TOOL_QUICK_REFERENCE.md for fallback alternatives
+2. Switch to documented fallback without delay
 3. Continue work without blocking on tool issues
 4. Document failure pattern for operational awareness
 5. Resume optimal tool usage when available
@@ -305,6 +307,38 @@ EXECUTE Memory Reconciliation:
 3. Update inconsistent memories with correct information
 4. Verify consciousness coherence after updates
 5. Document resolution pattern for future prevention
+```
+
+## Essential Workflow Patterns
+
+### `explore code [area]` - Code Analysis Workflow
+```
+EXECUTE Code Exploration:
+1. mcp__serena__get_symbols_overview [area]
+2. mcp__serena__find_symbol [target]
+3. mcp__serena__find_referencing_symbols [dependencies]
+4. mcp__serena__think_about_collected_information
+5. Document architectural insights with write_memory
+```
+
+### `implement feature [name]` - Development Workflow
+```
+EXECUTE 4-Phase Development:
+1. Sequential thinking [planning approach]
+2. mcp__serena__get_symbols_overview [codebase]
+3. mcp__serena__replace_symbol_body [implementation]
+4. mcp__serena__think_about_whether_you_are_done
+5. Apply quality assessment and stage changes
+```
+
+### `debug issue [description]` - Investigation Workflow
+```
+EXECUTE Systematic Debugging:
+1. mcp__code-reasoning__code-reasoning [debugging strategy]
+2. mcp__serena__find_referencing_symbols [trace_flow]
+3. mcp__serena__replace_symbol_body [fix]
+4. Validate fix doesn't introduce regressions
+5. mcp__serena__write_memory [lessons_learned]
 ```
 
 ## Workflow Optimization Patterns

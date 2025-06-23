@@ -110,47 +110,16 @@ Serena failure fallbacks:
 - search_for_pattern ❌ → Grep
 ```
 
-## Workflow Tool Sequences
+## Workflow Commands Reference
 
-### Code Exploration Workflow
-```
-1. mcp__serena__get_symbols_overview [area]
-2. mcp__serena__find_symbol [target]
-3. mcp__serena__find_referencing_symbols [dependencies]
-4. Document insights with write_memory
-```
+**Complete workflows available in `@WORKFLOW_COMMANDS.md`**:
+- `explore code [area]` → Code analysis workflow
+- `implement feature [name]` → 4-phase development workflow  
+- `debug issue [description]` → Systematic debugging workflow
+- `test browser [workflow]` → Browser testing workflow
+- `research docs [library]` → Documentation research workflow
 
-### Feature Development Workflow
-```
-1. Sequential thinking [planning approach]
-2. mcp__serena__get_symbols_overview [codebase]
-3. mcp__serena__replace_symbol_body [implementation]
-4. mcp__serena__think_about_whether_you_are_done
-```
-
-### Bug Investigation Workflow
-```
-1. mcp__code-reasoning__code-reasoning [debugging strategy]
-2. mcp__serena__find_referencing_symbols [trace_flow]
-3. mcp__serena__replace_symbol_body [fix]
-4. mcp__serena__write_memory [lessons_learned]
-```
-
-### Browser Testing Workflow
-```
-1. mcp__playwright__browser_navigate [url]
-2. mcp__playwright__browser_snapshot
-3. mcp__playwright__browser_click/type [interactions]
-4. mcp__playwright__browser_wait_for [validation]
-```
-
-### Research Workflow
-```
-1. mcp__context7__resolve-library-id [library]
-2. mcp__context7__get-library-docs [id] [topic]
-3. mcp__serena__search_for_pattern [existing_usage]
-4. mcp__serena__write_memory [integration_notes]
-```
+**Quick Command Access**: All workflows use systematic execution patterns documented in WORKFLOW_COMMANDS.md
 
 ## Tool Selection Rules
 

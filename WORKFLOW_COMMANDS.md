@@ -1,398 +1,241 @@
-# WORKFLOW COMMANDS - Command-Driven Execution Patterns
+# WORKFLOW COMMANDS - Slash Command Orchestration
 
 ## Mission Statement  
-**IMPERATIVE**: Transform verbose workflows into efficient, repeatable command sequences. Commands over explanations, execution over documentation.
+**IMPERATIVE**: Orchestrate complex workflows through slash command composition. Multi-step patterns, decision trees, and workflow automation using Claude Code command system.
 
-## Core Command Philosophy
-- **Commands Execute**: Direct action sequences, not explanations
-- **Patterns Repeat**: Standardized workflows for consistent execution
-- **Context Minimal**: Essential information only, reference externals
-- **Tools Prioritized**: MCP tool hierarchy enforced systematically
+## Core Workflow Philosophy
+- **Compose Commands**: Chain slash commands for complex multi-step workflows
+- **Decision-Driven**: Use conditional logic for workflow branching
+- **Pattern-Based**: Reusable workflow templates for systematic execution
+- **Reference-Based**: Individual commands in `.claude/commands/` contain detailed execution
 
-## Session Management Commands
+## Slash Command Quick Reference
 
-### `session start`
+### Session Management
+- `/session-start` - Initialize session with tools and context
+- `/session-end` - Close session with memory sync and staging
+- `/context-switch` - Switch between projects or contexts
+- `/emergency-restore` - Recover from session/context failures
+
+### Development Workflows
+- `/analyze-codebase` - Systematic code analysis and architecture understanding
+- `/implement-feature` - 4-phase feature development with quality gates
+- `/debug-issue` - Systematic debugging with root cause analysis
+- `/review-code` - Self-critique review process with improvement cycle
+- `/refactor-code` - Safe refactoring with regression prevention
+- `/explore-code` - Code exploration for mental model building
+- `/modify-code` - Symbol-based code modification with validation
+
+### Research & Analysis
+- `/research-library-docs` - Context7 documentation research for libraries
+- `/research-web` - Playwright web research for live sites and demos
+- `/analyze-requirements` - Requirements breakdown with decision framework
+- `/investigate-performance` - Performance analysis and optimization
+
+### Quality Assurance
+- `/assess-quality` - 4-dimension quality assessment with scoring
+- `/apply-critique` - Self-critique cycle for systematic improvement
+- `/validate-completion` - Completion verification with readiness check
+
+### Memory Management
+- `/capture-insight` - High-entropy insight capture with cross-referencing
+- `/recall-context` - Context restoration from distributed memory layers
+- `/sync-consciousness` - Memory synchronization across all layers
+- `/clean-memory` - Memory maintenance and consolidation
+
+### Tool Execution
+- `/test-browser` - Browser testing with systematic interaction sequences
+- `/modify-code` - Code modification through symbol-based editing
+
+### Error Recovery
+- `/recover-tool-failure` - Tool failure recovery with fallback procedures
+- `/handle-context-overload` - Context optimization for information overload
+- `/resolve-memory-inconsistency` - Memory reconciliation across layers
+
+## Multi-Command Workflow Patterns
+
+### Complete Feature Development Flow
 ```
-EXECUTE SessionStart Protocol:
-1. mcp__serena__initial_instructions
-2. mcp__serena__check_onboarding_performed  
-3. Load ACTIVE_CONTEXT.md → verify current state
-4. Update session metadata (time, branch, focus)
-5. Validate tool connectivity and readiness
-```
-
-### `session end`
-```
-EXECUTE SessionEnd Protocol:
-1. Update ACTIVE_CONTEXT.md with session summary
-2. mcp__serena__summarize_changes (if code work)
-3. Sync consciousness files (working → short-term → long-term)
-4. Commit staged changes (if review complete)
-5. Set next session context and objectives
-```
-
-### `context switch [target]`
-```
-EXECUTE Context Switch:
-1. Save current ACTIVE_CONTEXT.md state
-2. mcp__serena__activate_project [target] (if project switch)
-3. Load target context and verify tool states
-4. Update session metadata for new context
-5. Validate consciousness consistency
-```
-
-### `emergency restore`
-```
-EXECUTE Emergency Restore:
-1. Load latest ACTIVE_CONTEXT.md backup
-2. Verify git repository state and branch
-3. mcp__serena__restart_language_server (if needed)
-4. Reload consciousness files from known good state
-5. Resume work from last confirmed checkpoint
-```
-
-## Development Workflow Commands
-
-### `analyze codebase [area]`
-```
-EXECUTE Code Analysis Sequence:
-1. mcp__serena__get_symbols_overview [area]
-2. mcp__serena__find_symbol [key_components]
-3. mcp__serena__find_referencing_symbols [dependencies]
-4. mcp__serena__think_about_collected_information
-5. Document architectural insights (high-entropy only)
-```
-
-### `implement feature [name]`
-```
-EXECUTE 4-Phase Feature Development:
-
-PHASE 1 - Analysis:
-- Define objectives and success criteria
-- mcp__serena__get_symbols_overview [relevant_area]
-- Sequential thinking (if complex planning needed)
-- Plan implementation approach and file changes
-
-PHASE 2 - Implementation:
-- mcp__serena__replace_symbol_body (preferred modification)
-- mcp__serena__insert_after_symbol (new additions)
-- Follow KISS/YAGNI/DRY principles
-- Implement incrementally with testing
-
-PHASE 3 - Quality Assurance:
-- Apply self-critique cycle (creator→critic→defender→judge)
-- Validate against requirements and standards
-- Test integration points and edge cases
-- Address all identified issues
-
-PHASE 4 - Completion:
-- mcp__serena__think_about_whether_you_are_done
-- mcp__serena__write_memory [valuable_insights]
-- Update ACTIVE_CONTEXT.md with completion
-- Stage for review using Git Commitment Protocol
+1. /session-start
+2. /analyze-codebase [target_area]
+3. /research-library-docs [dependencies] (if needed)
+4. /implement-feature [feature_name]
+5. /review-code [implementation]
+6. /test-browser [feature_testing] (if UI involved)
+7. /validate-completion [feature]
+8. /session-end
 ```
 
-### `debug issue [description]`
+### Debugging & Investigation Flow
 ```
-EXECUTE Systematic Debugging:
-1. Reproduce issue and gather symptoms
-2. mcp__code-reasoning__code-reasoning [debugging strategy: binary_search|divide_conquer]
-3. mcp__serena__find_referencing_symbols [affected_components]
-4. Trace data flow and identify root cause
-5. Implement minimal fix with comprehensive testing
-6. Document prevention strategies and lessons learned
-```
-
-### `review code [target]`
-```
-EXECUTE Self-Critique Review:
-1. CREATOR: Review implementation completeness
-2. CRITIC: Challenge assumptions and identify weaknesses
-3. DEFENDER: Address criticisms systematically
-4. JUDGE: Assess quality score and approve/iterate
-5. Document improvements and quality assessment
+1. /debug-issue [problem_description]
+2. /investigate-performance [area] (if performance-related)
+3. /modify-code [fix_implementation]
+4. /test-browser [validation] (if UI involved)
+5. /apply-critique [fix_review]
+6. /validate-completion [fix]
 ```
 
-### `refactor code [target]`
+### Research & Implementation Flow
 ```
-EXECUTE Refactoring Workflow:
-1. mcp__serena__get_symbols_overview [target_area]
-2. Identify refactoring objectives and constraints
-3. Plan atomic changes with testing strategy
-4. mcp__serena__replace_symbol_body [incremental_changes]
-5. Validate no functionality regression
-6. Apply quality assessment and document patterns
+1. /research-library-docs [library_name]
+2. /research-web [demo_sites] (if needed)
+3. /analyze-requirements [integration_specs]
+4. /implement-feature [integration]
+5. /assess-quality [implementation]
 ```
 
-## Research & Analysis Commands
-
-### `research library [name]`
+### Quality Improvement Flow
 ```
-EXECUTE Library Research:
-1. mcp__context7__resolve-library-id [name]
-2. mcp__context7__get-library-docs [id] [topic]
-3. mcp__serena__search_for_pattern [existing_usage]
-4. Analyze integration patterns and trade-offs
-5. Document recommendations and implementation notes
+1. /assess-quality [target_component]
+2. /apply-critique [identified_issues]
+3. /refactor-code [improvements] (if needed)
+4. /validate-completion [improved_version]
 ```
 
-### `analyze requirements [source]`
+### Memory Management Flow
 ```
-EXECUTE Requirements Analysis:
-1. Sequential thinking [requirement_breakdown]
-2. Identify technical constraints and dependencies
-3. Decision framework analysis [approach_comparison]
-4. Plan implementation phases and success criteria
-5. Document architecture decisions and rationale
-```
-
-### `investigate performance [area]`
-```
-EXECUTE Performance Investigation:
-1. Identify performance metrics and bottlenecks
-2. mcp__code-reasoning__code-reasoning [systematic_profiling approach]
-3. mcp__serena__find_referencing_symbols [impact_analysis]
-4. Design optimization strategy with measurement
-5. Implement improvements with before/after validation
+1. /recall-context [relevant_domain]
+2. [Execute main work]
+3. /capture-insight [valuable_discoveries]
+4. /sync-consciousness
+5. /clean-memory [outdated_items] (periodic)
 ```
 
-## Quality Assurance Commands
+## Conditional Workflow Decision Trees
 
-### `assess quality [component]`
+### Research Decision Tree
 ```
-EXECUTE Quality Assessment:
-1. Apply 4-Dimension Scoring Framework:
-   - Task Completion (25%): Requirements fulfillment
-   - Code Quality (25%): Conventions and maintainability  
-   - Professional Discipline (25%): Tool usage and protocols
-   - Information Entropy (25%): Insights and learning
-2. Calculate weighted score (target: ≥7.5)
-3. Identify improvement areas if below threshold
-4. Document assessment rationale and next steps
+Need information about:
+├── Library/API documentation? → /research-library-docs
+├── Live website/demo functionality? → /research-web  
+├── Performance characteristics? → /investigate-performance
+└── Requirements analysis? → /analyze-requirements
 ```
 
-### `apply critique [scope]`
+### Development Path Selection
 ```
-EXECUTE Self-Critique Cycle:
-1. CREATOR Phase: Generate comprehensive solution
-2. CRITIC Phase: Systematic weakness identification
-3. DEFENDER Phase: Address all criticisms  
-4. JUDGE Phase: Final evaluation and approval
-5. Document improvement patterns for future reference
-```
-
-### `validate completion [task]`
-```
-EXECUTE Completion Validation:
-1. mcp__serena__think_about_whether_you_are_done
-2. Verify all acceptance criteria met
-3. Test edge cases and integration points
-4. Apply quality score assessment
-5. Confirm readiness for review/deployment
+Starting development work:
+├── New feature? → /implement-feature
+├── Bug fix needed? → /debug-issue → /modify-code
+├── Code quality issues? → /apply-critique → /refactor-code
+└── Exploration needed? → /analyze-codebase → /explore-code
 ```
 
-## Memory Management Commands
-
-### `capture insight [type]`
+### Quality Gate Decision Tree
 ```
-EXECUTE Insight Capture:
-1. Apply information entropy filter (would this surprise?)
-2. mcp__serena__write_memory "[pattern_name]" "[insight_content]"
-3. Tag with project context and applicability
-4. Cross-reference with existing knowledge base
-5. Update consciousness coherence
+Quality assessment results:
+├── Score ≥ 7.5? → /validate-completion
+├── Score 6.0-7.4? → /apply-critique → re-assess
+├── Score < 6.0? → /refactor-code → /apply-critique → re-assess
+└── Critical issues? → /debug-issue → restart workflow
 ```
 
-### `recall context [domain]`
+### Error Recovery Decision Tree
 ```
-EXECUTE Context Recall:
-1. mcp__serena__list_memories (scan available context)
-2. mcp__serena__read_memory [relevant_memories]
-3. Review ACTIVE_CONTEXT.md and recent WORKING_LOG
-4. Synthesize relevant information for current task
-5. Update working memory with loaded context
-```
-
-### `sync consciousness`
-```
-EXECUTE Consciousness Synchronization:
-1. Update ACTIVE_CONTEXT.md with current state
-2. Create WORKING_LOG entry for significant activities
-3. mcp__serena__write_memory for cross-project insights
-4. Verify consistency across all memory layers
-5. Backup consciousness files if substantial changes
+Encountering errors:
+├── Tool failure? → /recover-tool-failure
+├── Context overload? → /handle-context-overload  
+├── Memory inconsistency? → /resolve-memory-inconsistency
+└── Session corruption? → /emergency-restore
 ```
 
-### `clean memory [type]`
+## Advanced Workflow Automation
+
+### Parallel Command Execution
 ```
-EXECUTE Memory Maintenance:
-1. mcp__serena__list_memories (audit existing memories)
-2. Identify obsolete or redundant information
-3. mcp__serena__delete_memory [outdated_items]
-4. Consolidate related memories for efficiency
-5. Update consciousness organization patterns
+Concurrent research workflow:
+- Terminal 1: /research-library-docs [primary_library]
+- Terminal 2: /research-web [competitor_analysis]  
+- Terminal 3: /analyze-codebase [integration_points]
+→ Synthesize results → /implement-feature
 ```
 
-## Tool Execution Commands
-
-**Tool Selection**: See `@TOOL_QUICK_REFERENCE.md` for 30-second selection guide and tool hierarchy.
-
-### `explore code [area]`
+### Iterative Improvement Cycle
 ```
-EXECUTE Code Exploration:
-1. mcp__serena__get_symbols_overview [area] 
-2. mcp__serena__find_symbol [key_elements]
-3. mcp__serena__search_for_pattern [patterns]
-4. Build comprehensive mental model of codebase area
-5. Document architectural insights and patterns
+Quality improvement loop:
+1. /assess-quality [component] 
+2. If score < 7.5: /apply-critique [issues]
+3. /modify-code [improvements]
+4. Repeat step 1 until score ≥ 7.5
+5. /validate-completion [final_version]
 ```
 
-### `modify code [target]`
+### Context-Aware Workflow Selection
 ```
-EXECUTE Code Modification:
-1. mcp__serena__find_symbol [target]
-2. mcp__serena__replace_symbol_body [preferred_method]
-3. mcp__serena__insert_after_symbol [additions]
-4. Validate changes maintain system integrity
-5. Test modifications and document decisions
-```
-
-### `test browser [workflow]`
-```
-EXECUTE Browser Testing:
-1. mcp__playwright__browser_navigate [target_url]
-2. mcp__playwright__browser_snapshot (understand structure)
-3. mcp__playwright__browser_click/type [interaction_sequence]
-4. mcp__playwright__browser_wait_for [validation_criteria]
-5. Document test results and any discovered issues
+Based on ACTIVE_CONTEXT.md objectives:
+├── Research phase? → Research Flow pattern
+├── Implementation phase? → Development Flow pattern  
+├── Quality phase? → Quality Improvement Flow pattern
+└── Completion phase? → Validation and documentation
 ```
 
-### `research docs [library]`
+## Workflow Efficiency Patterns
+
+### Batched Operations
 ```
-EXECUTE Documentation Research:
-1. mcp__context7__resolve-library-id [library_name]
-2. mcp__context7__get-library-docs [resolved_id] [specific_topic]
-3. mcp__serena__search_for_pattern [existing_usage]
-4. Analyze API patterns and integration approaches
-5. Document integration recommendations and examples
+Memory management session:
+/recall-context [project] → 
+/capture-insight [discovery1] → 
+/capture-insight [discovery2] → 
+/sync-consciousness → 
+/clean-memory [obsolete]
 ```
 
-## Error Recovery Commands
+### Tool-Specific Workflows
+```
+Browser-heavy workflow:
+/research-web [target_site] → 
+/test-browser [functionality] → 
+/implement-feature [ui_components] → 
+/test-browser [validation]
 
-### `recover from tool failure [tool_type]`
-```
-EXECUTE Tool Recovery:
-1. Identify specific tool failure → See @TOOL_QUICK_REFERENCE.md for fallback alternatives
-2. Switch to documented fallback without delay
-3. Continue work without blocking on tool issues
-4. Document failure pattern for operational awareness
-5. Resume optimal tool usage when available
-```
-
-### `handle context overload`
-```
-EXECUTE Context Optimization:
-1. Focus on ACTIVE_CONTEXT.md primary objectives only
-2. Park non-essential context in WORKING_LOG
-3. Sequential thinking [simplification approach]
-4. Define minimum viable context for current task
-5. Resume work with reduced cognitive load
+Research-heavy workflow:  
+/research-library-docs [lib1] →
+/research-library-docs [lib2] →
+/analyze-requirements [integration] →
+/implement-feature [solution]
 ```
 
-### `resolve memory inconsistency`
+### Recovery-Enabled Workflows
 ```
-EXECUTE Memory Reconciliation:
-1. Identify inconsistent information across memory layers
-2. Determine authoritative source (recency, reliability)
-3. Update inconsistent memories with correct information
-4. Verify consciousness coherence after updates
-5. Document resolution pattern for future prevention
-```
-
-## Essential Workflow Patterns
-
-### `explore code [area]` - Code Analysis Workflow
-```
-EXECUTE Code Exploration:
-1. mcp__serena__get_symbols_overview [area]
-2. mcp__serena__find_symbol [target]
-3. mcp__serena__find_referencing_symbols [dependencies]
-4. mcp__serena__think_about_collected_information
-5. Document architectural insights with write_memory
+Resilient development pattern:
+1. /session-start
+2. Try: /implement-feature [name]
+3. On failure: /recover-tool-failure → retry
+4. On quality issues: /apply-critique → improve
+5. On completion: /validate-completion
+6. /session-end
 ```
 
-### `implement feature [name]` - Development Workflow
-```
-EXECUTE 4-Phase Development:
-1. Sequential thinking [planning approach]
-2. mcp__serena__get_symbols_overview [codebase]
-3. mcp__serena__replace_symbol_body [implementation]
-4. mcp__serena__think_about_whether_you_are_done
-5. Apply quality assessment and stage changes
-```
+## Workflow Customization Guidelines
 
-### `debug issue [description]` - Investigation Workflow
-```
-EXECUTE Systematic Debugging:
-1. mcp__code-reasoning__code-reasoning [debugging strategy]
-2. mcp__serena__find_referencing_symbols [trace_flow]
-3. mcp__serena__replace_symbol_body [fix]
-4. Validate fix doesn't introduce regressions
-5. mcp__serena__write_memory [lessons_learned]
-```
+### Creating Custom Workflow Patterns
+1. **Identify Repetitive Sequences**: Look for command combinations used frequently
+2. **Define Decision Points**: Add conditional logic for workflow branching  
+3. **Include Error Handling**: Plan recovery commands for common failure modes
+4. **Optimize for Context**: Consider token efficiency and tool switching overhead
+5. **Document Pattern**: Create reusable template with parameter placeholders
 
-## Workflow Optimization Patterns
+### Workflow Pattern Template
+```
+### [Pattern Name] Flow
+**Purpose**: [Brief description]
+**Triggers**: [When to use this workflow]
+**Prerequisites**: [Required context or setup]
 
-### Parallel Execution
-```
-BATCH SIMILAR OPERATIONS:
-- Multiple symbol lookups in single session
-- Related memory captures together
-- Grouped tool initializations
-- Consolidated context updates
-```
+Workflow:
+1. /command1 [parameter]
+2. /command2 [parameter] 
+3. [Conditional logic if needed]
+4. /command3 [parameter]
 
-### Context Efficiency
-```
-MINIMIZE CONTEXT SWITCHING:
-- Plan tool sequences before execution
-- Batch related operations together
-- Use references to external documentation
-- Focus on essential information only
-```
-
-### Quality Gates
-```
-ENFORCE SYSTEMATIC CHECKPOINTS:
-- Phase completion verification
-- Quality threshold validation
-- Memory synchronization confirmation
-- Tool readiness verification
-```
-
-## Command Extension Patterns
-
-### Custom Command Creation
-```
-DEFINE NEW COMMANDS:
-1. Identify repetitive workflow patterns
-2. Extract essential steps and tool sequences
-3. Create command syntax following established patterns
-4. Document usage context and expected outcomes
-5. Test command effectiveness and refine
-```
-
-### Domain-Specific Commands
-```
-ADAPT FOR SPECIALIZED DOMAINS:
-- Add domain context to universal patterns
-- Include specialized tool sequences
-- Integrate domain-specific quality criteria
-- Document domain conventions and standards
+**Success Criteria**: [How to know workflow completed successfully]
+**Recovery**: [What to do if workflow fails]
 ```
 
 ---
 
-**Command System Philosophy**: Execute efficiently, document insights, optimize continuously. Commands drive action, patterns ensure consistency, tools enable capability.
-
-**Usage Notes**: Commands replace verbose explanations. Reference external files for detailed procedures. Focus execution, not documentation.
+**Workflow Philosophy**: Compose commands systematically, handle errors gracefully, optimize for efficiency
+**Command Integration**: Individual commands provide execution, workflows provide orchestration
+**Pattern Evolution**: Document successful patterns, iterate on workflow effectiveness
